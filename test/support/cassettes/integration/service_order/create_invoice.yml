@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.omie.com.br/api/v1/servicos/osp/
+    body:
+      encoding: UTF-8
+      string: '{"call":"FaturarOS","param":[{"cCodIntOS":"1593622040"}],"app_key":"38333295000","app_secret":"4cea520a0e2a2ecdc267b75d3424a0ed"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 16 Jul 2020 21:02:09 GMT
+      content-type:
+      - application/json; encoding=UTF-8
+      content-length:
+      - '178'
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-omie-request-id:
+      - 9c503730-c7a7-11ea-b754-fd34b98e2b28
+      omieapi-warning:
+      - !binary |-
+        MSAtIE7Do28gZm9pIHBvc3PDrXZlbCByZWFsaXphciBvIGZhdHVyYW1lbnRvIGRlc3NhIE9yZGVtIGRlIFNlcnZpw6dvIU8gIkNOUEovQ1BGIiBkZXN0ZSBjbGllbnRlIGVzdMOhIGludsOhbGlkby4=
+      expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      last-modified:
+      - Thu, 16 Jul 2020 21:02:09 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cCodIntOS":"1593622040","nCodOS":463150235,"cCodStatus":"1","cDescStatus":"N\u00e3o
+        foi poss\u00edvel realizar o faturamento dessa Ordem de Servi\u00e7o!O \"CNPJ\/CPF\"
+        deste cliente est\u00e1 inv\u00e1lido."}'
+  recorded_at: Thu, 16 Jul 2020 21:02:09 GMT
+recorded_with: VCR 6.0.0

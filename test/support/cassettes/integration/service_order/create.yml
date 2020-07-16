@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.omie.com.br/api/v1/servicos/os/
+    body:
+      encoding: UTF-8
+      string: '{"call":"IncluirOS","param":[{"Cabecalho":{"cCodIntOS":"99999","cEtapa":"20","dDtPrevisao":"01/07/2020","nCodCli":2485994,"nQtdeParc":7},"Departamentos":[],"Email":{"cEnvBoleto":"N","cEnvLink":"N","cEnviarPara":"ajuda@omie.com.br"},"InformacoesAdicionais":{"cCidPrestServ":"SAO
+        PAULO (SP)","cCodCateg":"1.01.02","cDadosAdicNF":"OS incluida via API de teste
+        15287","nCodCC":11850365},"ServicosPrestados":[{"cCodServLC116":"7.07","cCodServMun":"01015","cDadosAdicItem":"Serviços
+        prestados","cDescServ":"Serviço prestado 001","cRetemISS":"N","cTribServ":"01","impostos":{"cFixarCOFINS":"","cFixarCSLL":"","cFixarIRRF":"","cFixarISS":"","cFixarPIS":"","nAliqCOFINS":0,"nAliqCSLL":0,"nAliqIRRF":0,"nAliqISS":3,"nAliqPIS":0,"nBaseISS":100,"nTotDeducao":0,"nValorCOFINS":0,"nValorCSLL":0,"nValorIRRF":0,"nValorISS":3,"nValorPIS":0},"nQtde":3,"nValUnit":1000}]}],"app_key":"38333295000","app_secret":"4cea520a0e2a2ecdc267b75d3424a0ed"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 16 Jul 2020 20:57:10 GMT
+      content-type:
+      - application/json; encoding=UTF-8
+      content-length:
+      - '133'
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-omie-request-id:
+      - e8ff85a0-c7a6-11ea-bdf1-7bdd12c8f5eb
+      omieapi-warning:
+      - !binary |-
+        NDY0MzU1MDI4IC0gT3JkZW0gZGUgU2VydmnDp28gY2FkYXN0cmFkbyBjb20gc3VjZXNzbyE=
+      expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      last-modified:
+      - Thu, 16 Jul 2020 20:57:10 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cCodIntOS":"99999","nCodOS":464355028,"cNumOS":"000000000001726","cCodStatus":"0","cDescStatus":"Ordem
+        de Servi\u00e7o cadastrado com sucesso!"}'
+  recorded_at: Thu, 16 Jul 2020 20:57:10 GMT
+recorded_with: VCR 6.0.0

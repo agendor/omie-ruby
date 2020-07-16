@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.omie.com.br/api/v1/servicos/nfse/
+    body:
+      encoding: UTF-8
+      string: '{"call":"ListarNFSEs","param":[{"nPagina":1,"nRegPorPagina":20,"nCodigoOS":2553368}],"app_key":"38333295000","app_secret":"4cea520a0e2a2ecdc267b75d3424a0ed"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 16 Jul 2020 20:52:03 GMT
+      content-type:
+      - application/json; encoding=UTF-8
+      content-length:
+      - '495'
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-omie-request-id:
+      - 32824c40-c7a6-11ea-bac5-4badca71c123
+      expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      last-modified:
+      - Thu, 16 Jul 2020 20:52:03 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"nPagina":1,"nTotPaginas":1,"nRegistros":1,"nTotRegistros":1,"nfseEncontradas":[{"Adicionais":{"cCodigoCategoria":"1.01.02","nCodigoCC":1208238},"Cabecalho":{"cAmbienteNFSe":"H","cCNPJEmissor":"15.080.950\/0001-40","cCPFDestinatario":"821.016.600-07","cCidadeEmissor":"BELO
+        HORIZONTE (MG)","cIMEmissor":"1233123","cStatusNFSe":"N","nCodNF":2553383,"nCodigoCliente":2485994,"nValorNFSe":200},"Emissao":{"cDataEmissao":"07\/05\/2014","cHoraEmissao":"","cUsuarioEmissao":""},"ListaServicos":[{"CidadePrestacao":"CABREUVA
+        (SP)","CodigoLC116":"02.03","CodigoServico":"01.02"}],"OrdemServico":{"nCodigoOS":2553368,"nNumeroOS":"19","nValorOS":200},"RPS":{"cStatusRPS":"004","nNumeroLote":2553384,"nNumeroRPS":"20","nStatusLote":"004"},"Servicos":{"CidadePrestacao":"CABREUVA
+        (SP)","CodigoLC116":"02.03","CodigoServico":"01.02"},"Valores":{"cIssRetido":"N","nAliquotaISS":5,"nValorBaseCalculo":200,"nValorISS":10,"nValorLiquido":200,"nValorTotalServicos":200}}]}'
+  recorded_at: Thu, 16 Jul 2020 20:52:03 GMT
+recorded_with: VCR 6.0.0

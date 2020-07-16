@@ -1,0 +1,86 @@
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/SafeNavigation:
+  Enabled: false
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: false
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - test/**/*.rb
+
+Metrics/AbcSize:
+  Exclude:
+    - test/**/*.rb
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
+  MinBodyLength: 2
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  MinSize: 5
+
+Style/TrailingUnderscoreVariable:
+  AllowNamedUnderscoreVariables: true
+
+Style/WordArray:
+  MinSize: 5
+
+Style/ExponentialNotation:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
