@@ -10,6 +10,10 @@ module Omie
       def create_invoice(data)
         conn.post("servicos/osp/", { call: "FaturarOS", param: [data] })
       end
+
+      def cancel_invoice(data)
+        conn.post("servicos/osp/", { call: "CancelarOS", param: [data] })
+      end
     end
   end
 end

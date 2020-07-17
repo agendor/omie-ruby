@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.omie.com.br/api/v1/servicos/osp/
+    body:
+      encoding: UTF-8
+      string: '{"call":"CancelarOS","param":[{"cCodIntOS":"1593622040"}],"app_key":"38333295000","app_secret":"4cea520a0e2a2ecdc267b75d3424a0ed"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 17 Jul 2020 17:53:41 GMT
+      Content-Type:
+      - application/json; encoding=UTF-8
+      Content-Length:
+      - '126'
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      X-Omie-Request-Id:
+      - 721a4b90-c856-11ea-96d6-6dab186a95df
+      Omieapi-Warning:
+      - !binary |-
+        MCAtIE9yZGVtIGRlIFNlcnZpw6dvIGNhbmNlbGFkYSBjb20gc3VjZXNzbyE=
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified:
+      - Fri, 17 Jul 2020 17:53:41 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, max-age=0
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cCodIntOS":"1593622040","nCodOS":463150235,"cCodStatus":"0","cDescStatus":"Ordem
+        de Servi\u00e7o cancelada com sucesso!"}'
+  recorded_at: Fri, 17 Jul 2020 17:53:41 GMT
+recorded_with: VCR 6.0.0
