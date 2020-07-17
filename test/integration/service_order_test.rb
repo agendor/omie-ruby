@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require "test_helper"
+require "support/config/vcr"
+
 class ServiceOrderTest < Minitest::Test
   def setup
     @client = Omie::Client.new(
@@ -77,6 +80,18 @@ class ServiceOrderTest < Minitest::Test
       response = @client.service_order.create_invoice(data)
 
       assert response.success?
+    end
+  end
+
+  def test_service_order_cancel_invoice
+    VCR.use_cassette("integration/service_order/cancel_invoice") do
+      data = { "cCodIntOS" => "1593622040" }
+
+      response = @client.service_order.cancel_invoice(data)
+
+      assert response.success?
+      assert_equal "Ordem de Serviço cancelada com sucesso!",
+        response.body["cDescStatus"]
     end
   end
 end
