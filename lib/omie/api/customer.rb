@@ -19,6 +19,15 @@ module Omie
           }
         )
       end
+
+      # rubocop:disable Naming/AccessorMethodName
+      def set_integration_id(data)
+        conn.post(
+          "geral/clientes/",
+          { call: "AssociarCodIntCliente", param: [data] }
+        )
+      end
+      # rubocop:enable Naming/AccessorMethodName
     end
   end
 end

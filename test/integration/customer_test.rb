@@ -50,4 +50,19 @@ class CustomerTest < Minitest::Test
       assert_equal "Ok!", response.body["descricao_status"]
     end
   end
+
+  def test_customer_set_integration_id
+    VCR.use_cassette("integration/customer/set_integration_id") do
+      data = {
+        "codigo_cliente_omie" => 412_494_365,
+        "codigo_cliente_integracao" => "435197"
+      }
+
+      response = @client.customer.set_integration_id(data)
+
+      assert response.success?
+      assert_equal "Código de Integração associado ao Cliente sucesso!",
+        response.body["descricao_status"]
+    end
+  end
 end

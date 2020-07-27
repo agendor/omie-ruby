@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://app.omie.com.br/api/v1/geral/clientes/
+    body:
+      encoding: UTF-8
+      string: '{"call":"AssociarCodIntCliente","param":[{"codigo_cliente_omie":412494365,"codigo_cliente_integracao":"435197"}],"app_key":"38333295000","app_secret":"4cea520a0e2a2ecdc267b75d3424a0ed"}'
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 16 Jul 2020 20:45:59 GMT
+      content-type:
+      - application/json; encoding=UTF-8
+      content-length:
+      - '127'
+      connection:
+      - keep-alive
+      server:
+      - nginx
+      x-omie-request-id:
+      - 59c00870-c7a5-11ea-bac5-4badca71c123
+      omieapi-warning:
+      - 447708994 - Cliente alterado com sucesso!
+      expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      last-modified:
+      - Thu, 16 Jul 2020 20:45:59 GMT
+      cache-control:
+      - no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0
+      pragma:
+      - no-cache
+      vary:
+      - Accept-Encoding
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"codigo_cliente_omie":412494365,"codigo_cliente_integracao":"456386","codigo_status":"0","descricao_status":"Código de Integração associado ao Cliente sucesso!"}'
+  recorded_at: Mon, 27 Jul 2020 15:12:23 GMT
+recorded_with: VCR 6.0.0
