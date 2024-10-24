@@ -23,8 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.require_path = "lib"
 
-  spec.add_dependency "faraday", "~> 1.0"
-  spec.add_dependency "faraday_middleware", "~> 1.0"
+  spec.add_dependency "faraday", "~> 2.0"
 
   spec.add_development_dependency "minitest", "~> 5.14"
   spec.add_development_dependency "minitest-reporters", "~> 1.4"
